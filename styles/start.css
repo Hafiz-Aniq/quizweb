@@ -5,6 +5,9 @@
     padding: 0;
     font-family: 'Poppins';
 }
+.logo img{
+width: 15vw;
+}
 
 .navbar{
     display: flex;
@@ -96,19 +99,19 @@
 }
   .card-containar{
     width: 50%;
-   height: 60vh;
+   height: 55vh;
    display: flex;
    flex-direction: column; 
    padding: 0 40px;
    border-radius:20px ;
    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-
+   
   }
   .card-containar h1{
     font-weight: 600;
     margin-top: 20px;
-    font-size: 3vw;
-color: rgba(252, 200, 34, 1);
+    font-size: 2.5vw;
+    color: rgba(252, 200, 34, 1);
   }
   .quiz-option{
     /* border: 1px solid black; */
@@ -124,8 +127,118 @@ color: rgba(252, 200, 34, 1);
     text-decoration: none;
     color: black;
   }
+  
+  @media only screen and (max-width:1248px) {
+    .navbar{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px ;
+  }
+  
+    .logo img{
+      width: 15vw;
+    }
+    .Btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition-duration: none;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+      background-color: rgba(252, 200, 34, 1);
+    }
+  
+  
+    .card-containar h1{
+      font-weight: 600;
+      font-size: 3vw;
+      margin-top: 20px;
+  color: rgba(252, 200, 34, 1);
+    }
+  
+    .quiz-option{
+      /* border: 1px solid black; */
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 1.5vw;
+      font-weight: 500;
+      cursor: pointer;box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      padding: 10px 20px;
+    }
+    .link:hover{
+      color: rgba(252, 200, 34, 1);
+    }
+    .link{
+      text-decoration: none;
+      color: black;
+    }
+  
+  
+    .card-containar{
+      width: 50%;
+     height: 65vh;
+     display: flex;
+     flex-direction: column; 
+     padding: 0 40px;
+     border-radius:20px ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+    }
+  }
 
-  @media screen and (max-width:430px) {
+  @media only screen and (max-width:1130px) {
+  
+    .card-containar{
+      width: 50%;
+     height: 60vh;
+     display: flex;
+     flex-direction: column; 
+     padding: 0 40px;
+     border-radius:20px ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+    }
+  }
+
+  
+  @media only screen and (max-width:1000px) {
+  
+    .card-containar{
+      width: 50%;
+     height: 56vh;
+     display: flex;
+     flex-direction: column; 
+     padding: 0 40px;
+     border-radius:20px ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+    }
+  }
+
+  
+  @media only screen and (max-width:900px) {
+  
+    .card-containar{
+      width: 50%;
+     height: 54vh;
+     display: flex;
+     flex-direction: column; 
+     padding: 0 40px;
+     border-radius:20px ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+    }
+  }
+
+  @media only screen and (max-width:835px) {
     
     .navbar{
       display: flex;
@@ -136,7 +249,287 @@ color: rgba(252, 200, 34, 1);
   }
 
     .logo img{
-      width: 50vw;
+      width: 20vw;
+    }
+    .Btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition-duration: none;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+      background-color: rgba(252, 200, 34, 1);
+    }
+  
+
+    .card-containar h1{
+      font-weight: 600;
+      font-size: 3.5vw;
+      margin-top: 20px;
+  color: rgba(252, 200, 34, 1);
+    }
+
+    .quiz-option{
+      /* border: 1px solid black; */
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 1.9vw;
+      cursor: pointer;box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      padding: 10px 20px;
+    }
+    .link:hover{
+      color: rgba(252, 200, 34, 1);
+    }
+    .link{
+      text-decoration: none;
+      color: black;
+    }
+
+
+    .card-containar{
+      width: 60%;
+     height: 58vh;
+     display: flex;
+     flex-direction: column; 
+     padding: 0 40px;
+     border-radius:20px ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+    }
+
+  }
+  
+  @media only screen and (max-width:750px) {
+  
+    .card-containar{
+      width: 50%;
+     height: 55vh;
+     display: flex;
+     flex-direction: column; 
+     padding: 0 40px;
+     border-radius:20px ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+    }
+  }
+
+
+  @media only screen and (max-width:700px) {
+    .navbar{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px ;
+  }
+
+    .logo img{
+      width: 30vw;
+    }
+    .Btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition-duration: none;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+      background-color: rgba(252, 200, 34, 1);
+    }
+  
+
+    .card-containar h1{
+      font-weight: 600;
+      font-size: 4vw;
+      margin-top: 20px;
+  color: rgba(252, 200, 34, 1);
+    }
+
+    .quiz-option{
+      /* border: 1px solid black; */
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 2vw;
+      font-weight: 500;
+      cursor: pointer;box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      padding: 10px 20px;
+    }
+    .link:hover{
+      color: rgba(252, 200, 34, 1);
+    }
+    .link{
+      text-decoration: none;
+      color: black;
+    }
+
+
+    .card-containar{
+      width: 60%;
+     height: 55vh;
+     display: flex;
+     flex-direction: column; 
+     padding: 0 40px;
+     border-radius:20px ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+    }
+  }
+
+  @media only screen and (max-width:600px) {
+    .navbar{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px ;
+  }
+
+    .logo img{
+      width: 35vw;
+    }
+    .Btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition-duration: none;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+      background-color: rgba(252, 200, 34, 1);
+    }
+  
+
+    .card-containar h1{
+      font-weight: 600;
+      font-size: 5vw;
+      margin-top: 20px;
+  color: rgba(252, 200, 34, 1);
+    }
+
+    .quiz-option{
+      /* border: 1px solid black; */
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 2.5vw;
+      font-weight: 500;
+      cursor: pointer;box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      padding: 10px 20px;
+    }
+    .link:hover{
+      color: rgba(252, 200, 34, 1);
+    }
+    .link{
+      text-decoration: none;
+      color: black;
+    }
+
+
+    .card-containar{
+      width: 60%;
+     height: 55.7vh;
+     display: flex;
+     flex-direction: column; 
+     padding: 0 40px;
+     border-radius:20px ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+    }
+  }
+
+
+  @media only screen and (max-width:500px) {
+    .navbar{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px ;
+  }
+
+    .logo img{
+      width: 40vw;
+    }
+    .Btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition-duration: none;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+      background-color: rgba(252, 200, 34, 1);
+    }
+  
+
+    .card-containar h1{
+      font-weight: 600;
+      font-size: 5.5vw;
+      margin-top: 20px;
+  color: rgba(252, 200, 34, 1);
+    }
+
+    .quiz-option{
+      /* border: 1px solid black; */
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 3vw;
+      font-weight: 500;
+      cursor: pointer;box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      padding: 10px 20px;
+    }
+    .link:hover{
+      color: rgba(252, 200, 34, 1);
+    }
+    .link{
+      text-decoration: none;
+      color: black;
+    }
+
+
+    .card-containar{
+      width: 60%;
+     height: 55vh;
+     display: flex;
+     flex-direction: column; 
+     padding: 0 40px;
+     border-radius:20px ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+    }
+  }
+
+  @media only screen and (max-width:400px) {
+    .navbar{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px ;
+  }
+
+    .logo img{
+      width: 35vw;
     }
     .Btn {
       display: flex;
@@ -166,7 +559,8 @@ color: rgba(252, 200, 34, 1);
       /* border: 1px solid black; */
       border-radius: 5px;
       margin-top: 20px;
-      font-size: 4.5vw;
+      font-size: 3vw;
+      font-weight: 500;
       cursor: pointer;box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
       padding: 10px 20px;
     }
@@ -181,6 +575,137 @@ color: rgba(252, 200, 34, 1);
 
     .card-containar{
       width: 60%;
+     height: 50.5vh;
+     display: flex;
+     flex-direction: column; 
+     padding: 0 40px;
+     border-radius:20px ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+    }
+  }
+
+  @media only screen and (max-width:300px) {
+    .navbar{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px ;
+  }
+
+    .logo img{
+      width: 55vw;
+    }
+    .Btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition-duration: none;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+      background-color: rgba(252, 200, 34, 1);
+    }
+  
+
+    .card-containar h1{
+      font-weight: 600;
+      font-size: 9vw;
+      margin-top: 20px;
+  color: rgba(252, 200, 34, 1);
+    }
+
+    .quiz-option{
+      /* border: 1px solid black; */
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 5vw;
+      font-weight: 500;
+      cursor: pointer;box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      padding: 10px 20px;
+    }
+    .link:hover{
+      color: rgba(252, 200, 34, 1);
+    }
+    .link{
+      text-decoration: none;
+      color: black;
+    }
+
+
+    .card-containar{
+      width: 80%;
+     height: 55vh;
+     display: flex;
+     flex-direction: column; 
+     padding: 0 40px;
+     border-radius:20px ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+    }
+  }
+  @media only screen and (max-width:200px) {
+    .navbar{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px ;
+  }
+
+    .logo img{
+      width: 55vw;
+    }
+    .Btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 30px;
+      height: 30px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition-duration: none;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+      background-color: rgba(252, 200, 34, 1);
+    }
+  
+
+    .card-containar h1{
+      font-weight: 600;
+      font-size: 9vw;
+      margin-top: 20px;
+  color: rgba(252, 200, 34, 1);
+    }
+
+    .quiz-option{
+      /* border: 1px solid black; */
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 5vw;
+      font-weight: 500;
+      cursor: pointer;box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      padding: 10px 20px;
+    }
+    .link:hover{
+      color: rgba(252, 200, 34, 1);
+    }
+    .link{
+      text-decoration: none;
+      color: black;
+    }
+
+
+    .card-containar{
+      width: 80%;
      height: 45vh;
      display: flex;
      flex-direction: column; 
@@ -189,5 +714,5 @@ color: rgba(252, 200, 34, 1);
      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   
     }
-
   }
+  
