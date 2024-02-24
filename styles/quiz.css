@@ -13,6 +13,9 @@
     justify-content: space-between;
     padding: 10px 50px ;
 }
+.logo img{
+width: 15vw;
+}
 .sepration{
     width: 80%;
     margin: 10px 0 50px 0;
@@ -94,6 +97,12 @@
     align-items: center;
     width: 100%;
 }
+.card-containar h1{
+  font-weight: 600;
+  font-size: 2.5vw;
+  margin-top: 20px;
+color: rgba(252, 200, 34, 1);
+}
   .card-containar{
     width: 60%;
    height: 70vh;
@@ -110,7 +119,6 @@
     margin-top: 20px;
     margin-bottom: -80px;
     color: rgba(252, 200, 34, 1);
-    overflow: hidden;
     max-height: 100px;
   }
   
@@ -118,6 +126,7 @@
     /* border: 1px solid black; */
     border-radius: 5px;
     margin-top: 15px;
+    font-size: 1.3vw;
     cursor: pointer;
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 1px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     padding: 10px 20px;
@@ -147,4 +156,167 @@ text-align: center;
     transform: translate(2px ,2px);
   }
 
+  @media screen and (max-width:1000px) {
   
+    
+    .logo img{
+      width: 20vw;
+      }
+  .quiz-option{
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 1.6vw;
+    cursor: pointer;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 1px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    padding: 10px 20px;
+  }
+  .card-containar h1{
+    font-weight: 600;
+    font-size: 2.7vw;
+    margin-top: 20px;
+  color: rgba(252, 200, 34, 1);
+  }
+    .card-containar{
+      width: 60%;
+     height: 70vh;
+     display: flex;
+     flex-direction: column; 
+     justify-content: space-between;
+     padding: 0 40px;
+     border-radius:20px ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+    } 
+  }
+
+  @media screen and (max-width:800px) {
+  
+    
+    .logo img{
+      width: 20vw;
+      }
+  .quiz-option{
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 1.9vw;
+    cursor: pointer;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 1px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    padding: 10px 20px;
+  }
+  .card-containar h1{
+    font-weight: 600;
+    font-size: 3.4vw;
+    margin-top: 20px;
+  color: rgba(252, 200, 34, 1);
+  }
+    .card-containar{
+      width: 60%;
+     height: 70vh;
+     display: flex;
+     flex-direction: column; 
+     justify-content: space-between;
+     padding: 0 40px;
+     border-radius:20px ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+    } 
+  }
+
+  @media screen and (max-width:700px) {
+   
+    .quiz-option{
+      /* border: 1px solid black; */
+      border-radius: 5px;
+      margin-top: 15px;
+      font-size: 1.9vw;
+      cursor: pointer;
+      box-shadow: rgb(204, 219, 232) 3px 3px 6px 1px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      padding: 10px 20px;
+    }
+    .card-containar h1{
+      font-weight: 600;
+      font-size: 3.5vw;
+      margin-top: 20px;
+    color: rgba(252, 200, 34, 1);
+    }
+      .card-containar{
+        width: 60%;
+       height: 70vh;
+       display: flex;
+       flex-direction: column; 
+       justify-content: space-between;
+       padding: 0 40px;
+       border-radius:20px ;
+       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    
+      } 
+    }
+
+    @media screen and (max-width:600px) {
+  
+    
+      .logo img{
+        width: 25vw;
+        }
+    .quiz-option{
+      /* border: 1px solid black; */
+      border-radius: 5px;
+      margin-top: 15px;
+      font-size: 2.2vw;
+      cursor: pointer;
+      box-shadow: rgb(204, 219, 232) 3px 3px 6px 1px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      padding: 10px 20px;
+    }
+    .card-containar h1{
+      font-weight: 600;
+      font-size: 3.4vw;
+      margin-top: 20px;
+    color: rgba(252, 200, 34, 1);
+    }
+      .card-containar{
+        width: 60%;
+       height: 70vh;
+       display: flex;
+       flex-direction: column; 
+       justify-content: space-between;
+       padding: 0 40px;
+       border-radius:20px ;
+       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    
+      } 
+    }
+    @media screen and (max-width:500px) {
+  
+    
+      .logo img{
+        width: 30vw;
+        }
+    .quiz-option{
+      /* border: 1px solid black; */
+      border-radius: 5px;
+      margin-top: 15px;
+      font-size: 2.8vw;
+      cursor: pointer;
+      box-shadow: rgb(204, 219, 232) 3px 3px 6px 1px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      padding: 10px 20px;
+    }
+    .card-containar h1{
+      font-weight: 600;
+      font-size:4.3vw;
+      margin-top: 20px;
+    color: rgba(252, 200, 34, 1);
+    }
+      .card-containar{
+        width: 60%;
+       height: 70vh;
+       display: flex;
+       flex-direction: column; 
+       justify-content: space-between;
+       padding: 0 40px;
+       border-radius:20px ;
+       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    
+      } 
+    }
