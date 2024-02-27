@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 3</title>
+    <link rel="stylesheet" href="../styles/result.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <a href="start.html"><img src="../assets/Group 114.svg" alt="" /> </a>
+      </div>
+      <div class="logout-btn">
+        <button class="Btn" id="btn">
+          <div class="sign">
+            <svg viewBox="0 0 512 512">
+              <path
+                d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+              ></path>
+            </svg>
+          </div>
+
+          <div class="text">Logout</div>
+        </button>
+      </div>
+    </div>
+    <div class="card-main-div">
+      <hr class="sepration" />
+      <div class="card-containar">
+        <h1>Quiz Result</h1>
+        <p>Total Marks: <span id="totalMarks" style="font-weight: 700;"></span></p>
+        <p>Correct Answers: <span id="correctAnswers" style="font-weight: 700;"></span></p>
+        <p>Percentage: <span id="percentage" style="font-weight: 700;"></span></p>
+        <p>Grade: <span id="grade" style="font-weight: 700;"></span></p>
+        <p>Remarks: <span id="remarks" style="font-weight: 700;"></span></p>
+
+        </div>
+      </div>
+    </div>
+    <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import {
+  getAuth,
+  signOut
+} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCFyH_yLW3mM7lrvv2utK4e314ItMC6-Qc",
+  authDomain: "quiz-web-99ff6.firebaseapp.com",
+  projectId: "quiz-web-99ff6",
+  storageBucket: "quiz-web-99ff6.appspot.com",
+  messagingSenderId: "477677273178",
+  appId: "1:477677273178:web:b3aa70be713ea711225863",
+  measurementId: "G-34Z6QC3M8L",
+};
+
+const logout = document.getElementById("btn");
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+
+logout.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  signOut(auth)
+    .then(() => {
+      // Sign-out successful.
+
+      window.location.href = "../index.html";
+    })
+    .catch((error) => {
+      // An error happened.
+    });
+});
+
+
+// Function to get URL parameters
+      function getParameterByName(name, url) {
+          if (!url) url = window.location.href;
+          name = name.replace(/[\[\]]/g, '\\$&');
+          var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      }
+
+      // Get parameters from the URL
+      var score = getParameterByName('score');
+      var totalQuestions = getParameterByName('totalQuestions');
+      var correctAnswers = getParameterByName('correctAnswers');
+      var percentage = getParameterByName('percentage');
+      let grade = getParameterByName('grade');
+      let remarks = getParameterByName('remarks');
+
+      // Update HTML spans with the parameter values
+      document.getElementById('totalMarks').textContent = score + '/' + 100;
+      document.getElementById('correctAnswers').textContent = correctAnswers;
+      document.getElementById('percentage').textContent = percentage + '%';
+
+      grade = "";
+  if (percentage >= 90) {
+      grade = "A";
+  } else if (percentage >= 80) {
+      grade = "B";
+  } else if (percentage >= 70) {
+      grade = "C";
+  } else if (percentage >= 60) {
+      grade = "D";
+  } else {
+      grade = "F";
+  }
+  document.getElementById("grade").textContent = grade;
+
+   remarks = "";
+  if (grade === "A") {
+      remarks = "Excellent!";
+  } else if (grade === "B") {
+      remarks = "Good job!";
+  } else if (grade === "C") {
+      remarks = "Fair!";
+  } else if (grade === "D") {
+      remarks = "Needs improvement!";
+  } else {
+      remarks = "Failed!";
+  }
+  document.getElementById("remarks").textContent = remarks;
+
+      
+  </script>
+  </body>
+</html>

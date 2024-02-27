@@ -24,6 +24,7 @@ const firebaseConfig = {
   measurementId: "G-34Z6QC3M8L",
 };
 
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -197,26 +198,33 @@ const javascriptQuestionsArray1 = [
 let currentQuestionIndex = 0;
 let score = 0;
 
-const questionElement = document.getElementById("question");
+const questionElement = document.getElementById("questionElement");
 const optionsElements = document.querySelectorAll(".quiz-option p");
 const submitButton = document.getElementById("submitBtn");
 
 function loadQuestion() {
-  const currentQuestion = javascriptQuestionsArray1[currentQuestionIndex];
-  questionElement.textContent = `Question ${currentQuestionIndex + 1}: ${
-    currentQuestion.question
-  }`;
-  optionsElements.forEach((option, index) => {
-    option.textContent = currentQuestion.options[index];
-    option.parentElement.style.color = "";
-    submitButton.style.cursor = "not-allowed";
-  });
+  if (questionElement) {
+    const currentQuestion = javascriptQuestionsArray1[currentQuestionIndex];
+    if (!currentQuestion) {
+      // If there are no more questions, return
+      return;
+    }
+    questionElement.textContent = `Question ${currentQuestionIndex + 1}: ${
+      currentQuestion.question
+    }`;
+    optionsElements.forEach((option, index) => {
+      option.textContent = currentQuestion.options[index];
+      option.parentElement.style.color = "";
+      submitButton.style.cursor = "not-allowed";
+    });
+  }
 }
 
+// Check the selected answer
 function checkAnswer() {
-  const selectedOptionIndex = [
-    ...document.querySelectorAll(".quiz-option"),
-  ].findIndex((opt) => opt.classList.contains("selected"));
+  const selectedOptionIndex = Array.from(optionsElements).findIndex((opt) =>
+    opt.parentElement.classList.contains("selected")
+  );
   const selectedOption =
     javascriptQuestionsArray1[currentQuestionIndex].options[
       selectedOptionIndex
@@ -236,13 +244,18 @@ function checkAnswer() {
     });
     submitButton.disabled = true;
   } else {
-    showResult();
+    const totalQuestions = javascriptQuestionsArray1.length;
+    const correctAnswers = score / 10;
+    const percentage = (correctAnswers / totalQuestions) * 100;
+    const grade = "A";
+    const remarks = "Test";
+    const queryParams = `?score=${score}&totalQuestions=${totalQuestions}&correctAnswers=${correctAnswers}&percentage=${percentage}&grade=${grade}&remarks=${remarks}`;
+    window.location.href = `result.html${queryParams}`;
   }
 }
-if ((submitButton.disabled = true)) {
-  submitButton.style.cursor = "not-allowed";
-}
+// Show result
 
+// Attach event listeners
 loadQuestion();
 
 optionsElements.forEach((option) => {
@@ -257,14 +270,8 @@ optionsElements.forEach((option) => {
     submitButton.style.cursor = "pointer";
   });
 });
-submitButton.addEventListener("click", checkAnswer);
-function showResult() {
-  alert(
-    `Quiz Completed!\nYour Score: ${score}\nTotal Questions: ${
-      javascriptQuestionsArray1.length
-    }\nCorrect Answers: ${score / 10}\nWrong Answers: ${
-      javascriptQuestionsArray1.length - score / 10
-    }`
-  );
-  window.location = "../pages/start.html";
+
+if (submitButton) {
+  submitButton.addEventListener("click", checkAnswer);
 }
+

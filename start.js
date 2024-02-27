@@ -46,7 +46,7 @@ e.preventDefault()
 signOut(auth).then(() => {
   // Sign-out successful.
 
-  window.location.href = "./index.html"
+  window.location.href = "../index.html"
 }).catch((error) => {
   // An error happened.
 });

@@ -133,7 +133,13 @@ function checkAnswer() {
     });
     submitButton.disabled = true;
   } else {
-    showResult();
+    const totalQuestions = javascriptQuestionsArray2.length;
+    const correctAnswers = score / 10;
+    const percentage = (correctAnswers / totalQuestions) * 100;
+    const grade = "A";
+    const remarks = "Test";
+    const queryParams = `?score=${score}&totalQuestions=${totalQuestions}&correctAnswers=${correctAnswers}&percentage=${percentage}&grade=${grade}&remarks=${remarks}`;
+    window.location.href = `result.html${queryParams}`;
   }
 }
 if ((submitButton.disabled = true)) {
