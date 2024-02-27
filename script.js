@@ -82,6 +82,7 @@ signinbtn?.addEventListener("click", function (e) {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+     alert('Invalid Email or Password')
       console.log(errorCode);
       console.log(errorMessage);
       // ..
