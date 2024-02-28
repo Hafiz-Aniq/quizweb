@@ -64,7 +64,6 @@ signupbtn?.addEventListener("click", function (e) {
 });
 
 //signin user code
-
 signinbtn?.addEventListener("click", function (e) {
   e.preventDefault();
   console.log(e);
@@ -73,21 +72,21 @@ signinbtn?.addEventListener("click", function (e) {
 
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      window.location.href = "../pages/start.html";
-
       const user = userCredential.user;
       console.log(user);
-      // ...
+
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-     alert('Invalid Email or Password')
+      alert('Invalid Email or Password')
       console.log(errorCode);
       console.log(errorMessage);
-      // ..
     });
 });
+
+
+
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -102,6 +101,9 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+// Check if the user is already logged in
+const user = JSON.parse(localStorage.getItem("user"));
+
 logout?.addEventListener("click", function (e) {
   e.preventDefault();
 
@@ -115,6 +117,7 @@ logout?.addEventListener("click", function (e) {
       // An error happened.
     });
 });
+
 
 // quiz1 code
 
@@ -131,8 +134,8 @@ const javascriptQuestionsArray1 = [
   },
   {
     question: "What keyword is used to declare variables in JavaScript?",
-    options: ["var", "int", "string", "variable"],
-    answer: "var",
+    options: ["let", "int", "string", "variable"],
+    answer: "let",
   },
   {
     question: "Which of the following is not a JavaScript data type?",
@@ -275,4 +278,28 @@ optionsElements.forEach((option) => {
 if (submitButton) {
   submitButton.addEventListener("click", checkAnswer);
 }
+
+
+// Check if a user is signed in
+let users = auth.currentUser
+if (users) {
+  // Save the results to Firestore under the user's UID
+  getFirestore.collection('quizResults').doc(user.uid).set({
+    score: score,
+    totalQuestions: totalQuestions,
+    correctAnswers: correctAnswers,
+    percentage: percentage,
+grade: grade,
+remarks: remarks
+  })
+  .then(function() {
+    console.log("Quiz results successfully saved!");
+  })
+  .catch(function(error) {
+    console.error("Error saving quiz results: ", error);
+  });
+} else {
+  console.log("No user is currently signed in.");
+}
+
 
