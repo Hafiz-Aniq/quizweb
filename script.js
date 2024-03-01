@@ -48,8 +48,8 @@ signupbtn?.addEventListener("click", function (e) {
         email: email,
         password: password,
       });
-
       window.location.href = "../pages/start.html";
+
       const user = userCredential.user;
       console.log(user);
       // ...
@@ -72,9 +72,9 @@ signinbtn?.addEventListener("click", function (e) {
 
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
+      window.location = './pages/start.html'
       const user = userCredential.user;
       console.log(user);
-
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -109,9 +109,9 @@ logout?.addEventListener("click", function (e) {
 
   signOut(auth)
     .then(() => {
+      window.location.href = "../index.html";
       // Sign-out successful.
 
-      window.location.href = "../index.html";
     })
     .catch((error) => {
       // An error happened.
